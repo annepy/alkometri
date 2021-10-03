@@ -14,13 +14,13 @@ function App() {
     let litres = amount * 0.33
     let grams = litres * 8 * 4.5
     let burning = weight / 10
-    let lGrams = grams - (burning * time)
+    let gramsLeft = grams - (burning * time)
     let alcohol = 0;
     if(gender === "male") {
-      alcohol = lGrams / (weight * 0.7);
+      alcohol = gramsLeft / (weight * 0.7);
     }
     else {
-      alcohol = lGrams / (weight * 0.6);
+      alcohol = gramsLeft / (weight * 0.6);
     }
     setResult(alcohol);
   }
