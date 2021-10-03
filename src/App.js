@@ -11,13 +11,16 @@ function App() {
 
   function calculate(e) {
     e.preventDefault();
+    let litres = amount * 0.33
+    let grams = litres * 8 * 4.5
+    let burning = weight / 10
+    let lGrams = grams - (burning * time)
     let alcohol = 0;
-    let grams = (((amount * 0.33) * 8 * 4.5) - (weight - 10) * time);
     if(gender === "male") {
-      alcohol = grams / (weight * 0.7);
+      alcohol = lGrams / (weight * 0.7);
     }
     else {
-      alcohol = grams / (weight * 0.6);
+      alcohol = lGrams / (weight * 0.6);
     }
     setResult(alcohol);
   }
