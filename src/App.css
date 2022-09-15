@@ -6,6 +6,10 @@ div {
   margin-bottom: 10px;
 }
 
+select {
+  width: 50px;
+}
+
 label {
   display: inline-block;
   width: 100px;
